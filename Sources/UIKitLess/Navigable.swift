@@ -17,11 +17,11 @@ protocol Navigable: class {}
 extension Navigable {
 
     #if !os(macOS)
-    var viewController: UIViewController? {
+    public var viewController: UIViewController? {
         return self as? UIViewController
     }
     #else
-    var viewController: NSViewController? {
+    public var viewController: NSViewController? {
         return self as? NSViewController
     }
     #endif

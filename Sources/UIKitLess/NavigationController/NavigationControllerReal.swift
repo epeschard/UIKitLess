@@ -11,30 +11,30 @@ import UIKit
 
 class NavigationControllerReal: UINavigationController, NavigationWireframe {
 
-    func show(_ navigable: Navigable) {
+    public func show(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         show(viewController, sender: nil)
     }
 
-    func push(_ navigable: Navigable) {
+    public func push(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         pushViewController(viewController, animated: true)
     }
 
-    func pop() {
+    public func pop() {
         popViewController(animated: true)
     }
 
-    func present(_ navigable: Navigable, completion: Callback?) {
+    public func present(_ navigable: Navigable, completion: Callback?) {
         guard let viewController = navigable.viewController else { return }
         present(viewController, animated: true, completion: completion)
     }
 
-    func dismiss(completion: Callback?) {
+    public func dismiss(completion: Callback?) {
         dismiss(animated: true, completion: completion)
     }
 
-    static func with(root: Navigable) -> NavigationWireframe {
+    public static func with(root: Navigable) -> NavigationWireframe {
         guard let viewController = root.viewController,
             let navigation = UINavigationController(rootViewController: viewController) as? NavigationWireframe else {
             return NavigationControllerReal()

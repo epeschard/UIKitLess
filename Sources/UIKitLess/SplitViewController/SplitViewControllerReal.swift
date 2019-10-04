@@ -11,12 +11,12 @@ import UIKit
 
 class SplitViewControllerReal: UISplitViewController, SplitViewWireframe {
 
-    func show(_ navigable: Navigable) {
+    public func show(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         show(viewController, sender: nil)
     }
 
-    func showDetail(_ navigable: Navigable) {
+    public func showDetail(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         showDetailViewController(viewController, sender: nil)
     }
