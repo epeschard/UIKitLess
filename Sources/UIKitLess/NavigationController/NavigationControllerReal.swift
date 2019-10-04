@@ -6,6 +6,7 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
+#if !os(macOS)
 import UIKit
 
 class NavigationControllerReal: UINavigationController, NavigationWireframe {
@@ -41,3 +42,7 @@ class NavigationControllerReal: UINavigationController, NavigationWireframe {
         return navigation
     }
 }
+#else
+//TODO: No equivalent to UINavigationController on AppKit
+// https://stackoverflow.com/questions/4853209/uinavigationcontroller-alike-for-desktop-cocoa
+#endif
