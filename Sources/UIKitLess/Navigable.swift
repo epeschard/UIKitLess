@@ -12,16 +12,16 @@ import UIKit
 import AppKit
 #endif
 
-protocol Navigable: class {}
+public protocol Navigable: class {}
 
-extension Navigable {
+public extension Navigable {
 
     #if !os(macOS)
-    public var viewController: UIViewController? {
+    var viewController: UIViewController? {
         return self as? UIViewController
     }
     #else
-    public var viewController: NSViewController? {
+    var viewController: NSViewController? {
         return self as? NSViewController
     }
     #endif

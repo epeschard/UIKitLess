@@ -57,5 +57,5 @@ class NavigationControllerFake: NavigationWireframe {
 }
 
 protocol ScreenNameable {
-    fileprivate var screenName: String { get }
+    var screenName: String { get }
 }
