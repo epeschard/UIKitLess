@@ -44,7 +44,7 @@ public class NavigationControllerFake: NavigationWireframe {
         return screenNameable?.screenName
     }
 
-    var visible: Navigable? {
+    public var visible: Navigable? {
         return presented ?? viewStack.last
     }
 
