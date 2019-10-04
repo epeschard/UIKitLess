@@ -9,14 +9,14 @@
 #if !os(macOS)
 import UIKit
 
-class SplitViewControllerReal: UISplitViewController, SplitViewWireframe {
+public class SplitViewControllerReal: UISplitViewController, SplitViewWireframe {
 
-    public func show(_ navigable: Navigable) {
+    func show(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         show(viewController, sender: nil)
     }
 
-    public func showDetail(_ navigable: Navigable) {
+    func showDetail(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         showDetailViewController(viewController, sender: nil)
     }

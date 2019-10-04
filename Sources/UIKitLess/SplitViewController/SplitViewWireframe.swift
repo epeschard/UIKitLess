@@ -6,7 +6,7 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-protocol SplitViewWireframe {
+public protocol SplitViewWireframe {
     func show(_ navigable: Navigable)
     func showDetail(_ navigable: Navigable)
 }

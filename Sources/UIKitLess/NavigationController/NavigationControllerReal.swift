@@ -9,32 +9,32 @@
 #if !os(macOS)
 import UIKit
 
-class NavigationControllerReal: UINavigationController, NavigationWireframe {
+public class NavigationControllerReal: UINavigationController, NavigationWireframe {
 
-    public func show(_ navigable: Navigable) {
+    func show(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         show(viewController, sender: nil)
     }
 
-    public func push(_ navigable: Navigable) {
+    func push(_ navigable: Navigable) {
         guard let viewController = navigable.viewController else { return }
         pushViewController(viewController, animated: true)
     }
 
-    public func pop() {
+    func pop() {
         popViewController(animated: true)
     }
 
-    public func present(_ navigable: Navigable, completion: Callback?) {
+    func present(_ navigable: Navigable, completion: Callback?) {
         guard let viewController = navigable.viewController else { return }
         present(viewController, animated: true, completion: completion)
     }
 
-    public func dismiss(completion: Callback?) {
+    func dismiss(completion: Callback?) {
         dismiss(animated: true, completion: completion)
     }
 
-    public static func with(root: Navigable) -> NavigationWireframe {
+    static func with(root: Navigable) -> NavigationWireframe {
         guard let viewController = root.viewController,
             let navigation = UINavigationController(rootViewController: viewController) as? NavigationWireframe else {
             return NavigationControllerReal()
