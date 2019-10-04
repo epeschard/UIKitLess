@@ -7,6 +7,6 @@
 //
 
 public protocol SplitViewWireframe {
-    public func show(_ navigable: Navigable)
-    public func showDetail(_ navigable: Navigable)
+    func show(_ navigable: Navigable)
+    func showDetail(_ navigable: Navigable)
 }
