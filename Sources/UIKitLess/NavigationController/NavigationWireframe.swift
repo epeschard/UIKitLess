@@ -9,11 +9,11 @@
 public typealias Callback = () -> Void
 
 public protocol NavigationWireframe {
-    func show(_ navigable: Navigable)
-    func push(_ navigable: Navigable)
-    func pop()
-    func present(_ navigable: Navigable, completion: Callback?)
-    func dismiss(completion: Callback?)
-    static func with(root: Navigable) ->
+    public func show(_ navigable: Navigable)
+    public func push(_ navigable: Navigable)
+    public func pop()
+    public func present(_ navigable: Navigable, completion: Callback?)
+    public func dismiss(completion: Callback?)
+    public static func with(root: Navigable) ->
     NavigationWireframe
 }
