@@ -6,6 +6,8 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
+typealias Callback = () -> Void
+
 protocol NavigationWireframe {
     func show(_ navigable: Navigable)
     func push(_ navigable: Navigable)

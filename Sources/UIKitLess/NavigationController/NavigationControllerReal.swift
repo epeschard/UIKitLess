@@ -24,12 +24,12 @@ class NavigationControllerReal: UINavigationController, NavigationWireframe {
         popViewController(animated: true)
     }
 
-    func present(_ navigable: Navigable, completion: (() -> ())?) {
+    func present(_ navigable: Navigable, completion: Callback?) {
         guard let viewController = navigable.viewController else { return }
         present(viewController, animated: true, completion: completion)
     }
 
-    func dismiss(completion: (() -> ())?) {
+    func dismiss(completion: Callback?) {
         dismiss(animated: true, completion: completion)
     }
 

@@ -25,12 +25,12 @@ class NavigationControllerFake: NavigationWireframe {
         _ = viewStack.popLast()
     }
 
-    func present(_ navigable: Navigable, completion: (() -> ())?) {
+    func present(_ navigable: Navigable, completion: Callback?) {
         presented = navigable
         completion?()
     }
 
-    func dismiss(completion: (() -> ())?) {
+    func dismiss(completion: Callback?) {
         presented = nil
         completion?()
     }
