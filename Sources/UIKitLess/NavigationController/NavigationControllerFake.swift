@@ -10,45 +10,45 @@ import Foundation
 
 public class NavigationControllerFake: NavigationWireframe {
 
-    private var viewStack = [Navigable]()
-    private var presented: Navigable?
+    var viewStack = [Navigable]()
+    var presented: Navigable?
 
-    func show(_ navigable: Navigable) {
+    public func show(_ navigable: Navigable) {
         viewStack.append(navigable)
     }
 
-    func push(_ navigable: Navigable) {
+    public func push(_ navigable: Navigable) {
         viewStack.append(navigable)
     }
 
-    func pop() {
+    public func pop() {
         _ = viewStack.popLast()
     }
 
-    func present(_ navigable: Navigable, completion: Callback?) {
+    public func present(_ navigable: Navigable, completion: Callback?) {
         presented = navigable
         completion?()
     }
 
-    func dismiss(completion: Callback?) {
+    public func dismiss(completion: Callback?) {
         presented = nil
         completion?()
     }
 
-    func setTitle(with name: String) {
+    public func setTitle(with name: String) {
 
     }
 
-    var visibleScreenName: String? {
+    public var visibleScreenName: String? {
         let screenNameable = visible as? ScreenNameable
         return screenNameable?.screenName
     }
 
-    private var visible: Navigable? {
+    var visible: Navigable? {
         return presented ?? viewStack.last
     }
 
-    static func with(root: Navigable) -> NavigationWireframe {
+    public static func with(root: Navigable) -> NavigationWireframe {
         let navigation = NavigationControllerFake()
         navigation.presented = root
         navigation.viewStack.append(root)
