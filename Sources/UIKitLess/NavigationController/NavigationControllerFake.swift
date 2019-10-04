@@ -13,6 +13,11 @@ public class NavigationControllerFake: NavigationWireframe {
     var viewStack = [Navigable]()
     var presented: Navigable?
 
+    public init() {
+        self.viewStack = []
+        self.presented = nil
+    }
+
     public func show(_ navigable: Navigable) {
         viewStack.append(navigable)
     }

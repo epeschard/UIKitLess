@@ -13,6 +13,13 @@ public class SplitViewControllerFake: SplitViewWireframe {
     var detailStack = [Navigable]()
     public var detail: Navigable?
 
+    public init() {
+        self.masterStack = []
+        self.master = nil
+        self.detailStack = []
+        self.detail = nil
+    }
+
     public func show(_ navigable: Navigable) {
         masterStack.append(navigable)
     }
