@@ -8,7 +8,7 @@
 
 public typealias Callback = () -> Void
 
-public protocol NavigationWireframe {
+public protocol NavigationWireframe: Navigable {
     func show(_ navigable: Navigable)
     func push(_ navigable: Navigable)
     func pop()
