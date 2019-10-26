@@ -13,6 +13,10 @@ public class UINavigationWireframeFactory: NavigationWireframeFactory {
 
     public init() {}
 
+    public init(root: UIViewController) {
+        return UINavigationController(rootViewController: root)
+    }
+
     public func make() -> NavigationWireframe {
         return UINavigationWireframe()
     }

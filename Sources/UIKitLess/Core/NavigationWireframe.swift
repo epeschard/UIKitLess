@@ -9,6 +9,7 @@
 import Foundation
 
 public protocol NavigationWireframeFactory {
+    init(rootViewController: NavigationWireframe)
     func make() -> NavigationWireframe
 }
 
