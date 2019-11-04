@@ -24,7 +24,6 @@ extension UIAlertController: ToastWireframe {
     }
 }
 
-extension UIToastWireframe: Viewable {}
-extension UIToastWireframeSpy: Viewable {}
 extension UIAlertController: Viewable {}
+extension ToastWireframe: Viewable {}
 #endif

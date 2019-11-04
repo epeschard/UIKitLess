@@ -88,5 +88,5 @@ extension UINavigationWireframe: UINavigationControllerDelegate {
 }
 
 extension UINavigationWireframe: Viewable {}
-extension UINavigationWireframeSpy: Viewable {}
+extension NavigationWireframeSpy: Viewable {}
 #endif
