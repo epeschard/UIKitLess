@@ -10,10 +10,7 @@
 import UIKit
 
 /// Implements the SplitWireframe for use with UIKit components (using a UISplitViewController).
-public class UISplitWireframe: UISplitViewController {}
-
-extension UISplitWireframe: SplitWireframe {
-
+public class UISplitWireframe: UISplitViewController {
     public var master: Viewable? {
         didSet {
             guard let viewController = master?.viewController else { return }
@@ -29,6 +26,8 @@ extension UISplitWireframe: SplitWireframe {
         }
     }
 }
+
+extension UISplitWireframe: SplitWireframe {}
 
 extension UISplitWireframe: Viewable {}
 extension SplitWireframeSpy: Viewable {}
