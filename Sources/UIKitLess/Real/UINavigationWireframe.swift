@@ -81,9 +81,9 @@ extension UINavigationWireframe: UINavigationControllerDelegate {
             return
         }
 
-        guard let navigatable = fromViewController as? Navigatable else { return }
+        guard let navigable = fromViewController as? Navigable else { return }
 
-        navigatable.navigationWireframeDidGoBack()
+        navigable.navigationWireframeDidGoBack()
     }
 }
 #endif
