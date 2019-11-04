@@ -86,4 +86,7 @@ extension UINavigationWireframe: UINavigationControllerDelegate {
         navigable.navigationWireframeDidGoBack()
     }
 }
+
+extension UINavigationWireframe: Viewable {}
+extension UINavigationWireframeSpy: Viewable {}
 #endif

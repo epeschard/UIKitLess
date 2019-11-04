@@ -31,4 +31,5 @@ extension UISplitWireframe: SplitWireframe {
 }
 
 extension UISplitWireframe: Viewable {}
+extension UISplitWireframeSpy: Viewable {}
 #endif
