@@ -10,7 +10,7 @@ public class FakeNavigationWireframeFactory: NavigationWireframeFactory {
 
     let fake: NavigationWireframe
 
-    required public init(rootViewController: NavigationWireframe) {
+    required public init(root: NavigationWireframe) {
         self.fake = rootViewController
     }
 
